@@ -41,6 +41,36 @@ class UsersController {
       return res.status(400).json({ error: err.message })
     }
   }
+
+  static async updateUser(req, res, next) {
+    const { id } = req.params
+    try {
+      const updatedUser = await dataBase.Users.update(
+        { name: req.body.name, password: req.body.password, role: req.body.role }, {
+        where: {
+          id: Number(id)
+        }
+      });
+      return res.status(201).json({ status: "usuário alterado com sucesso"})
+    } catch(err) {
+      return res.status(400).json({ error: err.message })
+    }
+  }
+
+  static async deleteUser(req, res, next) {
+    const { id } = req.params
+    try {
+      const deletedUser =  await dataBase.Users.destroy({
+        where: {
+          id: Number(id)
+        }
+      });
+      return res.status(201).json({ status: "usuário deletado com sucesso"})
+    } catch(err) {
+      return res.status(400).json({ error: err.message })
+    }
+  }
+
 }
 
 module.exports = UsersController;
