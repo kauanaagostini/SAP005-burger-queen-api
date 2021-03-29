@@ -69,7 +69,6 @@ class OrdersController {
           product_id: item.id,
           qtd: item.qtd
         }
-        console.log(itemProductOrder)
 
         const createdProductOrder = await dataBase.ProductsOrders.create(itemProductOrder)
       })
@@ -89,6 +88,25 @@ class OrdersController {
           }
         });
       return res.status(201).json({ status: "ordem alterada com sucesso!"})
+    } catch(err) {
+      return res.status(400).json({ error: err.message })
+    }
+  }
+
+  static async deleteOrder(req, res, next) {
+    const { id } = req.params
+    try {
+      const deleteOrder = await dataBase.ProductsOrders.destroy({
+        where: {
+          order_id: Number(id)
+        }
+      });
+      const deleteProductOrder = await dataBase.Orders.destroy({
+        where: {
+          id: Number(id)
+        }
+      });
+      return res.status(200).json({ status: "Ordem deletada com sucesso!"})
     } catch(err) {
       return res.status(400).json({ error: err.message })
     }

@@ -8,6 +8,6 @@ router.get("/", OrdersController.getAllOrders)
 router.get("/:id", OrdersController.getOrderById)
 router.post("/", OrdersController.createOrder)
 router.put("/:id", OrdersController.updateOrder)
-// router.delete("/:id", UsersController.deleteUser)
+router.delete("/:id", OrdersController.deleteOrder)
 
 module.exports = router
