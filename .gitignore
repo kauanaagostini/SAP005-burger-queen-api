@@ -2,3 +2,4 @@ node_modules
 server/db/config/config.json
 .vscode
 /*.env
+db-files
