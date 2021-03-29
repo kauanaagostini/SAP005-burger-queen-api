@@ -7,7 +7,7 @@ const router = Router()
 router.get("/", OrdersController.getAllOrders)
 router.get("/:id", OrdersController.getOrderById)
 router.post("/", OrdersController.createOrder)
-// router.put("/:id", UsersController.updateUser)
+router.put("/:id", OrdersController.updateOrder)
 // router.delete("/:id", UsersController.deleteUser)
 
 module.exports = router

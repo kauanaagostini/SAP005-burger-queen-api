@@ -79,6 +79,21 @@ class OrdersController {
     }
   }
 
+  static async updateOrder(req, res, next) {
+    const { id } = req.params
+    try {
+      const upedateOrder = await dataBase.Orders.update(
+        { status: req.body.status }, {
+          where: {
+            id: Number(id)
+          }
+        });
+      return res.status(201).json({ status: "ordem alterada com sucesso!"})
+    } catch(err) {
+      return res.status(400).json({ error: err.message })
+    }
+  }
+
 }
 
 module.exports = OrdersController;
