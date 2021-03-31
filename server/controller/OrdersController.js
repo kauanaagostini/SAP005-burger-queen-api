@@ -21,7 +21,7 @@ class OrdersController {
           }
         }]
       })
-      return res.status(200).json({allOrders})
+      return res.status(200).json(allOrders)
     } catch(err){
       return res.status(400).json({ error : err.message })
     }
@@ -43,7 +43,6 @@ class OrdersController {
           ],
           through: {
             model: dataBase.ProductsOrders,
-            as: 'productsOrders',
             attributes: ['qtd']
           }
         }]
