@@ -121,7 +121,7 @@
             }
           },
           "404": {
-            "description": "user not found",
+            "description": "not found",
             "schema": {
               "$ref": "#/definitions/Error"
             }
@@ -289,6 +289,12 @@
           },
           "400": {
             "description": "unsuccessful operation",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "not found",
             "schema": {
               "$ref": "#/definitions/Error"
             }

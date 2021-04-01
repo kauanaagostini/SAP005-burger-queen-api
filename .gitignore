@@ -3,3 +3,4 @@ server/db/config/config.json
 .vscode
 /*.env
 db-files
+server/utils

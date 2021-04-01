@@ -5,6 +5,7 @@ class UsersController {
   static async getAllUsers(req, res) {
     try {
       const allUsers = await dataBase.Users.findAll({
+        order: [["id", "ASC"]],
         attributes: {
           exclude: ["password"]
         }
@@ -42,7 +43,7 @@ class UsersController {
     const { name, email, password, role, restaurant } = req.body;
 
     if( name.length < 1 || email.length < 1 || password.length < 1 || role.length < 1 || restaurant.length < 1){
-      return res.status(400).json({ status: "Campos de preenchimento obrigatório vazios" })
+      return res.status(400).json({ status: "Campos de preenchimento obrigatório vazios." })
     }
 
     try {
@@ -63,11 +64,11 @@ class UsersController {
     }
   }
 
-  static async updateUser(req, res, next) {
+  static async updateUser(req, res) {
     const { id } = req.params
-    const { name, password, role } = req.body
+    const { name, password, role, email, restaurant } = req.body
 
-    if(req.body.email != undefined || req.body.restaurant != undefined) {
+    if(email != undefined || restaurant != undefined) {
       return res.status(400).json({ status: "Os parametros: e-mail e restaurant não podem ser alterados."})
     }
 
@@ -84,7 +85,7 @@ class UsersController {
     }
   }
 
-  static async deleteUser(req, res, next) {
+  static async deleteUser(req, res) {
     const { id } = req.params
     try {
       const deletedUser =  await dataBase.Users.destroy({
@@ -92,7 +93,7 @@ class UsersController {
           id: Number(id)
         }
       });
-      return res.status(201).json({ status: "usuário deletado com sucesso"})
+      return res.status(201).json({ status: "Usuário deletado com sucesso"})
     } catch(err) {
       return res.status(400).json({ error: err.message })
     }
