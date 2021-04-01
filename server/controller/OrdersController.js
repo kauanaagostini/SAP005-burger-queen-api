@@ -60,7 +60,7 @@ class OrdersController {
       req.body.products.map(async(item) => {
         const product = await dataBase.Products.findByPk(item.id);
         if (!product) {
-          return res.status(400).json({ "error": "deu ruim"})
+          return res.status(400).json({ "error": "produto não existe"})
         }
       
         const itemProductOrder = {

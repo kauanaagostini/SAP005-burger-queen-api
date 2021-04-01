@@ -119,6 +119,12 @@
             "schema": {
               "$ref": "#/definitions/Error"
             }
+          },
+          "404": {
+            "description": "user not found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
           }
         }
       },
