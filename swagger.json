@@ -465,6 +465,12 @@
             "schema": {
               "$ref": "#/definitions/Error"
             }
+          },
+          "404": {
+            "description": "not found",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
           }
         }
       },
@@ -789,6 +795,10 @@
         "type": {
           "type": "string"
         },
+        "qtd": {
+          "type": "integer",
+          "format": "int64"
+        },
         "price": {
           "type": "integer",
           "format": "float"
@@ -799,9 +809,14 @@
         "complement": {
           "type": "string"
         },
-        "qtd": {
-          "type": "integer",
-          "format": "int64"
+        "image": {
+          "type": "string"
+        },
+        "menuType": {
+          "type": "string"
+        },
+        "menuSubType": {
+          "type": "string"
         }
       }
     },
