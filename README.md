@@ -53,7 +53,7 @@ Nesse projeto nosso maior desafio foi entender como estrutura um Banco de Dados,
 Abaixo a imagem da estrutura do Banco de dados.
 <br/>
 <p align="center">
-  <img src="./img/Readme/Diagrama.png" height="400px"/>
+  <img src="./img/Readme/Diagrama.png" height="500px"/>
 </p>
 
 ## 4. Ferramentas Utilizadas
