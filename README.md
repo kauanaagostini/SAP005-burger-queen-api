@@ -48,12 +48,12 @@ Para isso recomendo ler a documentação da _API_ para verificar as informaçõe
 
 ## 3. Estrutura do Banco de Dados
 
-Nesse projeto nosso maior desafio foi entender como estrutura um Banco de Dados, e quais interações entre tabelas necessitáriamos desenvolver para que as requisições funcionassem de maneira simples e eficaz.
+Nesse projeto nosso maior desafio foi entender como estrutura um Banco de Dados, e quais interações entre tabelas necessitaríamos desenvolver para que as requisições funcionassem de maneira simples e eficaz.
 
 Abaixo a imagem da estrutura do Banco de dados.
 <br/>
 
-<img align="center" src="./db-files/Diagrama.png" height="300px"/>
+<img align="center" src="./img/Readme/Diagrama.png" height="300px"/>
 
 
 ## 4. Ferramentas Utilizadas
@@ -72,11 +72,11 @@ Abaixo a imagem da estrutura do Banco de dados.
 
 ## 5. Considerações Finais
 
-Esse projeto nos trouxe um desafio diferente dos demais, estavamos acostumadas a desenvolver Front-End, ter uma interface para interação Homem-máquina.
+Esse projeto nos trouxe um desafio diferente dos demais, estávamos acostumadas a desenvolver Front-End, ter uma interface para interação Homem-máquina.
 
 O Back-End sempre foi uma parte da programação muito obscura para mim, e no decorrer do desenvolvimento desse projeto pude aprender muita coisa e me aprimorar ainda mais como Desenvolvedora. 
 
-Porém tudo isso não teria acontecido sem enorme apoio e incentivo das minhas **amigas de código** que não dúvidaram nenhum segundo da minha capacidade de aprendizagem e adaptação.
+Porém tudo isso não teria acontecido sem enorme apoio e incentivo das minhas **amigas de código** que não duvidaram nenhum segundo da minha capacidade de aprendizagem e adaptação.
 E por isso dedico esse projeto a elas, [Ana Clara](https://github.com/anaclara-gf), [Akemi](https://github.com/akemimeka), [Beatriz](https://github.com/beatrizpenalva), [Camila](https://github.com/cbalieiro), [Caroline](https://github.com/CarolineSCosta), [Cristina](https://github.com/crismantovani), [Dunia](https://github.com/dunia07), [Gabriela](https://github.com/gabrielasilva1991) e [Laura](https://github.com/LauraDeperon).
 
 O apoio de vocês foi fundamental para a entrega desse projeto. **Obrigada!**
